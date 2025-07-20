@@ -1,5 +1,5 @@
 
-# 🏀 NBA Best Players Comparison – Data Science Project
+# 🏀 NBA Best Players Comparison 
 
 This project aims to finally answer the question:  
 **Who is the best at their best — Michael Jordan, Kobe Bryant, or LeBron James?**
@@ -8,13 +8,16 @@ It brings together NBA data from CSV files, web scraping, and live API calls. Th
 
 ---
 
-## ✅ Key Features
+## 🧱 Project Architecture
 
-- Multisource data ingestion: static datasets, scraped stats, and API feeds
-- Kafka-based data streaming and PySpark transformation
-- Cleaned and unified dataset loaded into MongoDB
-- Visual analysis comparing peak performance across multiple metrics
-- Fully implemented in Jupyter notebooks for transparency and reproducibility
+![Project Architecture](NBA%20Data%20Notebook/images/Architecture.jpg)
+
+This architecture shows the full data pipeline:
+
+- Data is collected from Kaggle, the NBA API, and web scraping tools.
+- Kafka handles streaming of real-time API data.
+- PySpark processes data and MongoDB stores the structured output.
+- Final analysis and visualization are done using Pandas, Seaborn, NumPy, and Matplotlib inside Jupyter Notebook
 
 ---
 
@@ -22,21 +25,21 @@ It brings together NBA data from CSV files, web scraping, and live API calls. Th
 
 ```
 CSV Data/
-├── CSV-Script.ipynb          – loads and cleans historical data
+├── CSV-Script.ipynb                      – loads and cleans historical data
 
 WebScraper/
-├── NBA WEB Producer.ipynb    – scrapes player stats
-├── NBA WEB Consumer.ipynb    – processes scraped data
+├── NBA WEB Producer.ipynb                – scrapes player stats
+├── NBA WEB Consumer.ipynb                – processes scraped data
 ├── NBA-Data-WebScraping.ipynb
-├── Data/                     – yearly scraped CSVs
+├── Data/                                 – yearly scraped CSVs
 
 Kafka API PubSub/
-├── NBA API Producer.ipynb    – pulls and sends NBA API data to Kafka
-├── API Data Consumer with Spark.ipynb – processes streamed data using PySpark
+├── NBA API Producer.ipynb                – pulls and sends NBA API data to Kafka
+├── API Data Consumer with Spark.ipynb    – processes streamed data using PySpark
 
 NBA Data Notebook/
-├── NBA Data Notebook.ipynb   – merges all sources and performs final analysis
-├── images/                   – architecture and data flow diagrams
+├── NBA Data Notebook.ipynb               – merges all sources and performs final analysis
+├── images/                               – architecture and data flow diagrams
 ```
 
 ---
@@ -54,5 +57,5 @@ Scraping         | BeautifulSoup, Requests
 API              | NBA Stats API
 Data             | CSV (Kaggle, Basketball Reference)
 Visualization    | Matplotlib, Seaborn
-Environment      | Jupyter Notebooks
+Environment      | Conda, Jupyter Notebooks
 ```
