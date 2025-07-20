@@ -25,21 +25,21 @@ This architecture shows the full data pipeline:
 
 ```
 CSV Data/
-├── CSV-Script.ipynb                      – loads and cleans historical data
+├── CSV-Script.ipynb                    
 
 WebScraper/
-├── NBA WEB Producer.ipynb                – scrapes player stats
-├── NBA WEB Consumer.ipynb                – processes scraped data
+├── NBA WEB Producer.ipynb                
+├── NBA WEB Consumer.ipynb                
 ├── NBA-Data-WebScraping.ipynb
-├── Data/                                 – yearly scraped CSVs
+├── Data/                                 
 
 Kafka API PubSub/
-├── NBA API Producer.ipynb                – pulls and sends NBA API data to Kafka
-├── API Data Consumer with Spark.ipynb    – processes streamed data using PySpark
+├── NBA API Producer.ipynb                
+├── API Data Consumer with Spark.ipynb    
 
 NBA Data Notebook/
 ├── NBA Data Notebook.ipynb               – merges all sources and performs final analysis
-├── images/                               – architecture and data flow diagrams
+├── images/                               
 ```
 
 ---
